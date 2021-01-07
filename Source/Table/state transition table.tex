@@ -1,0 +1,41 @@
+
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+\begin{tabular}{ |p{1cm}|p{1cm}|p{1cm}|p{1cm}| }
+\hline
+\multicolumn{4}{|c|}{State Transition Table} \\
+\hline
+Present state & Input & Next state & Output  \\
+\hline
+ $S_0$ & 1 & $S_1$ &0 \\
+\hline
+$S_1$ & 0 & $S_2$  &0\\
+\hline
+$S_2$ & 1 & $S_3$  &1\\
+\hline
+$S_3$ & 0 & $S_2$  &0\\
+\hline
+$S_2$ & 1 & $S_3$  &1\\
+\hline
+$S_3$ & 1 & $S_1$  &0\\
+\hline
+$S_1$ & 0 & $S_2$  &0\\
+\hline
+$S_2$ & 1 & $S_3$  &1\\
+\hline
+$S_3$ & 0 & $S_2$  &0\\
+\hline
+$S_2$ & 0 & $S_0$  &0\\
+\hline
+$S_0$ & 1 & $S_1$  &0\\
+\hline
+$S_1$ & 1 & $S_1$  &0\\
+\hline
+$S_1$ & 0 & $S_2$  &0\\
+\hline
+
+\end{tabular}
+\end{document}

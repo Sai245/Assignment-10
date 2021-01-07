@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary {positioning}
+\usetikzlibrary {arrows.meta,automata,positioning,shadows}
+
+
+
+
+\title{Assignment 10}
+\author{Perisetti Sai Ram Mohan Rao}
+\begin{document}
+
+
+\maketitle
+
+\section{Question 1}
+The state diagram of Finite State Machine (FSM) desgined to detect an overlapping sequence of three bits as shown in figure. The FSM has an input 'In' and an output 'Out'.The intial state of FSM is $S_0$ .
+
+\begin{figure}[h]
+\centering
+\input{figure/figure1.tex}
+\caption{}
+\label{figure}
+\end{figure}
+
+If the input sequence is 10101101001101, starting with leftmost bit,then how many number of times 'Out' will be 1 is \rule{2cm}{0.10mm}
+
+\maketitle 
+
+\section{Solution}
+We are requried to find output sequence of Finite State Machine(FSM) and number 1's in output sequence.
+
+\begin{figure}[h]
+\centering
+\input{figure/figure2.tex}
+\caption{}
+\label{figure}
+\end{figure}
+
+If the CLK is not applied,there will be no differnce between input sequence and the output sequence.
+
+The mechanism that should take place in Finite state machine is mentioned in Figure 1.We will take few parts of figure in question.
+
+
+\begin{figure}[!ht]
+\centering
+\input{figure/figure4.tex}
+\caption{}
+\label{figure}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\input{figure/figure3.tex}
+\caption{}
+\label{figure}
+\end{figure}
+
+
+
+
+In the finite machine we are requried to find the output in current state for corresponding input .We have to see Input value at current state to get the Output.For example if we are at current state $S_0$ with input=1 then Output =0 and state changes to $S_1$.
+
+
+\begin{table}[!th]
+\centering
+\input{Table/state transition table.tex}
+\caption{State Transtion Table}
+\label{table}
+\end{table}
+
+
+We are now looking at another example.If the current state of FSM is $S_2$ with input=0
+then it gives output=0 and state changes to $S_0$.
+
+
+Output sequence of corresponding current state of given input sequence is 00101001000001
+that is repesented in Table 1 Current state,Input and output.
+
+
+\begin{figure}[h]
+\centering
+\input{figure/figure5.tex}
+\caption{}
+\label{figure}
+\end{figure}
+
+
+\begin{table}[h]
+\centering
+\input{Table/table.tex}
+\caption{Table for States,Input and Output of finite state machine}
+\label{table}
+\end{table}
+
+
+The Output sequence of FSM is 00101001000001 from Table 1. \\
+Then number of times 'Out' will be 1 is 4
+
+\centering 
+Answer = 4
+
+\end{document}

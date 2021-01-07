@@ -1,0 +1,26 @@
+\begin{tikzpicture}[->,>={Stealth[round]},shorten >=1pt,auto,node distance=2.5cm,on grid,semithick,
+every state/.style={fill=white,draw=black,circular drop shadow,text=}]
+\node[state] (A)               {00};
+\node[state] (B) [below =of A] {01};
+\node[state] (C) [below =of B] {10};
+\node[state] (D) [below =of C] {11};
+\put (12,-15) {$S_0$};
+\put (12,-60) {$S_1$};
+\put (12,-140) {$S_2$};
+\put (12,-210) {$S_3$};
+
+
+
+
+\path (A) edge [loop right]   node[text width=0.75cm,align=center]{In=0\\Out=0}(A)
+      (A) edge                node[text width=0.75cm,align=center]{In=1\\Out=0} (B)
+      (B) edge [loop left]   node[text width=0.75cm,align=center]{In=1\\Out=0} (B)
+      (B) edge                node[text width=0.75cm,align=center]{In=0\\Out=0} (C)
+      (C) edge                node[text width=0.75cm,align=center]{In=1\\Out=1} (D)
+      (D) edge [bend left=90]    node[text width=1.00cm,align=center]{In=0\\Out=0} (C)
+      (C) edge [bend left=90] node[text width=1.0cm,align=center]{In=0\\Out=0} (A)
+      (D) edge [bend right=90] node[text width=1.0cm,align=center]{In=1\\Out=0} (B);
+
+
+\end{tikzpicture}
+
